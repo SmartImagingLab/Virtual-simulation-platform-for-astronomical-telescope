@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://101.201.36.205/virindex/iframeSrc/DataStatistics.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>eachart</title>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" type="text/css" href="./public.css">
+    </head>
+
+    <body style="">
+
+        <div id="DataSta"><section class="el-container canvas"><aside class="el-aside leftData" style="width: 60%;"><div id="eachart1" _echarts_instance_="ec_1589268851261" style="-webkit-tap-highlight-color: transparent; user-select: none;"><div style="position: relative; overflow: hidden; width: 696px; height: 400px; padding: 0px; margin: 0px; border-width: 0px;"></div></div></aside> <main class="el-main"><div id="eachart2" _echarts_instance_="ec_1589268851262" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;"><div style="position: relative; overflow: hidden; width: 424px; height: 400px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="530" height="500" style="position: absolute; left: 0px; top: 0px; width: 424px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div></main></section></div>
+    
+
+    <!-- import Vue before Element -->
+<script src="./jquery.min.js.下载"></script>
+<script src="./vue.js.下载"></script>
+<script src="./echarts.min.js.下载"></script>
+<!-- import JavaScript -->
+<script src="./index.js.下载"></script>
+<script type="text/javascript" src="./DataStatistics.js.下载"></script>
+    <!--<script>
+        new Vue().$mount('#DataSta');
+        var myChart1 = echarts.init(document.getElementById('eachart1'));
+        var myChart2 = echarts.init(document.getElementById('eachart2'));
+        //折线图
+        var categoryData = getData();
+        myChart1.setOption({
+            title: {},
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+            legend: {
+                data: ['全部', '老师', '学生', '游客']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                boundaryGap: false,
+                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: [{
+                    name: '全部',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: '老师',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name: '学生',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name: '游客',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {
+                        normal: {}
+                    },
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                }
+
+            ]
+        });
+        
+        
+    var json = { "people": [
+
+  
+{"item": "2017-01", "teacher":"200", "student": "300","other": "130" },
+
+  
+{ "item": "2017-02", "teacher":"100", "student": "80","other": "245" },
+
+  
+{"item": "2017-04", "teacher":"140", "student": "110","other": "125" }
+
+]};
+
+        /*获取折线图数据*/
+        function getData() {
+            var time = [];
+            var allData = [];
+            var teacherData = [];
+            var studentData = [];
+            var touristData = [];
+            $.ajax({
+                type: "get",
+                url: "",
+                async: true,
+                success: function(data) {
+                    for(var i = 0; i < data.length; i++) {
+
+                    }
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        }/*啦啦啦啦*/
+        
+        /*获取折线图数据*/
+        function getData() {
+            var time = [];
+            var allData = [];
+            var teacherData = [];
+            var studentData = [];
+            var touristData = [];
+            $.ajax({
+                type: "get",
+                url: "",
+                async: true,
+                success: function(data) {
+                    for(var i = 0; i < data.length; i++) {
+
+                    }
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        }
+
+        //饼图
+        var data = genData(50);
+        myChart2.setOption({
+            title: {
+                text: '同名数量统计',
+                subtext: '纯属虚构',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                type: 'scroll',
+                orient: 'vertical',
+                right: 10,
+                top: 20,
+                bottom: 20,
+                data: data.legendData,
+
+                selected: data.selected
+            },
+            series: [{
+                name: '姓名',
+                type: 'pie',
+                radius: '55%',
+                center: ['40%', '50%'],
+                data: data.seriesData,
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        });
+        
+    function genData(count) {
+            var nameList = [
+                '赵', '钱', '孙', '李', '周', '吴', '郑', '王', '冯', '陈', '褚', '卫', '蒋', '沈', '韩', '杨', '朱', '秦', '尤', '许', '何', '吕', '施', '张', '孔', '曹', '严', '华', '金', '魏', '陶', '姜', '戚', '谢', '邹', '喻', '柏', '水', '窦', '章', '云', '苏', '潘', '葛', '奚', '范', '彭', '郎', '鲁', '韦', '昌', '马', '苗', '凤', '花', '方', '俞', '任', '袁', '柳', '酆', '鲍', '史', '唐', '费', '廉', '岑', '薛', '雷', '贺', '倪', '汤', '滕', '殷', '罗', '毕', '郝', '邬', '安', '常', '乐', '于', '时', '傅', '皮', '卞', '齐', '康', '伍', '余', '元', '卜', '顾', '孟', '平', '黄', '和', '穆', '萧', '尹', '姚', '邵', '湛', '汪', '祁', '毛', '禹', '狄', '米', '贝', '明', '臧', '计', '伏', '成', '戴', '谈', '宋', '茅', '庞', '熊', '纪', '舒', '屈', '项', '祝', '董', '梁', '杜', '阮', '蓝', '闵', '席', '季', '麻', '强', '贾', '路', '娄', '危'
+            ];
+            var legendData = [];
+            var seriesData = [];
+            var selected = {};
+            for(var i = 0; i < 50; i++) {
+                name = Math.random() > 0.65 ?
+                    makeWord(4, 1) + '·' + makeWord(3, 0) :
+                    makeWord(2, 1);
+                legendData.push(name);
+                seriesData.push({
+                    name: name,
+                    value: Math.round(Math.random() * 100000)
+                });
+                selected[name] = i < 6;
+            }
+
+            return {
+                legendData: legendData,
+                seriesData: seriesData,
+                selected: selected
+            };
+
+            function makeWord(max, min) {
+                var nameLen = Math.ceil(Math.random() * max + min);
+                var name = [];
+                for(var i = 0; i < nameLen; i++) {
+                    name.push(nameList[Math.round(Math.random() * nameList.length - 1)]);
+                }
+                return name.join('');
+            }
+        }
+
+        myChart1.setOption(option1);
+        myChart2.setOption(option2);
+    </script>-->
+
+</body></html>
