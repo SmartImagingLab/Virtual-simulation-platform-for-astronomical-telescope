@@ -14,5 +14,5 @@ IP地址：http://39.104.88.52:8080/SmartOptics/<br>
 可下载[SmartOptics.war](https://pan.baidu.com/s/1xA2qON15GM2K3sozilgA_g)（提取码：de2h），发布在服务器上使用。<br>
 因上传限制，[所有文件](https://pan.baidu.com/s/1j-f0dQfBJ97nCVOsEkwokA)(提取码：qcvf)
 ## Show
-[登陆界面.jpg](https://github.com/SmartImagingLab/Virtual-simulation-platform-for-astronomical-telescope/blob/master/images/%E4%B8%BB%E7%95%8C%E9%9D%A2.png) <br>
-[主界面.jpg](https://github.com/SmartImagingLab/Virtual-simulation-platform-for-astronomical-telescope/blob/master/images/%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2.png)
+[登陆界面.jpg](https://github.com/SmartImagingLab/Virtual-simulation-platform-for-astronomical-telescope/blob/master/images/%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2.png)<br>
+[主界面.jpg](https://github.com/SmartImagingLab/Virtual-simulation-platform-for-astronomical-telescope/blob/master/images/%E4%B8%BB%E7%95%8C%E9%9D%A2.png)
