@@ -1,0 +1,658 @@
+/* reset css */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+pre,
+form,
+fieldset,
+select,
+input,
+textarea,
+button,
+p,
+blockquote,
+th,
+td,
+img,
+iframe {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 100%;
+    height: 100%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 16px/1 "微软雅黑", "Microsoft YaHei", "Tahoma", "Arial";
+    outline: none;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #445b73;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    /* table-layout: fixed; */
+}
+
+.el-textarea__inner textarea {
+    resize: none;
+}
+
+a {
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    /* blr: expression(this.onFocus=this.blur()); */
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+#nextPage,
+#pageGo #number,
+#pageGo button,
+.selectPage {
+    float: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* 公用样式 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+    display: block;
+    content: " ";
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+/* 取消花括号 */
+
+[v-cloak] {
+    display: none;
+}
+
+
+/* reset css end */
+
+
+/* ============================================整体结构框架============================================ */
+
+
+/* admin 左侧 */
+
+#app {
+    min-width: 1200px;
+}
+
+.aside-fixed-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 230px;
+    height: 100%;
+    overflow: hidden;
+    z-index: 3000;
+    background: #2a3f54;
+    transition: all 0.3s linear;
+    font-size: 14px;
+    color: #e5e9ed;
+}
+
+
+/* admin 主题内容 */
+
+#main {
+    position: relative;
+    margin-left: 230px;
+}
+
+
+/* 框架大小 */
+
+#iframe {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.content {
+    height: 100px;
+    padding-top: 10px;
+    padding-left: 16px;
+    padding-right: 24px;
+}
+
+
+/* =========================================================顶部实验图片========================================================= */
+
+.headNav {
+    padding: 10px 24px 10px 16px;
+}
+
+.testBox {
+    position: relative;
+    width: 100%;
+    padding:20px 18px;
+    border: 1px solid #dfe2e6;
+}
+
+.labImg {
+	float: left;
+    width:400px;
+	padding-top:30px;
+}
+.el-carousel__container {
+   width:400px;
+}
+.labImg img {
+    width: 100%;
+}
+.labInfo {
+	min-height: 300px;
+	margin-left: 410px;
+}
+.labName {
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.labIntro {
+    font-size: 20px;
+}
+
+.labList {
+    width: 100%;
+    padding: 6px 0;
+}
+
+.labList li {
+    display: flex;
+    line-height: 1.4;
+}
+
+.labList li .label {
+    white-space: nowrap;
+}
+
+.enterBox {
+	padding:10px ;
+   /* text-align: right; */
+    /* font-size: 14px; */
+}
+
+.enterBox>div>div {
+   display: inline-block;
+    margin-left: 20px;
+	vertical-align: middle;
+}
+
+.enterBox p {
+    color: red;
+}
+
+.enterBox p img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.enterBox p a {
+    text-decoration: #487acf underline;
+    color: #4da9f4;
+}
+
+.enter a {
+    display: block;
+    width: 145px;
+    height: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.enter1 a {
+    background: url("../images/enter2.png") no-repeat
+}
+
+.enter2 a {
+    background: url("../images/enter.png") no-repeat
+}
+
+.enter3 a {
+    background: url("../images/cz.png") no-repeat
+}
+
+.enter1 a:hover {
+    background: url("../images/enter2l.png") no-repeat
+}
+
+.enter2 a:hover {
+    background: url("../images/enterl.png") no-repeat
+}
+
+.enter3 a:hover {
+    background: url("../images/cz2.png") no-repeat
+}
+
+
+
+/* 顶部实验图片 end*/
+
+
+/* ===================================================左侧菜单样式===================================================*/
+
+.logo {
+    margin: 50px auto 10px;
+    width: 204px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    background: url("../images/logo.png") no-repeat center;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 115px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+
+.user>div {
+    margin: 0 5px;
+}
+
+.userInfo span {
+    display: block;
+    text-align: left;
+}
+
+.userInfo .fontsize14 {
+    font-size: 14px;
+    color: #b3b8b8;
+}
+
+.userInfo .fontsize16 {
+    font-size: 16px;
+    color: #f2fcff;
+}
+
+.asideMenu li {
+    position: relative;
+    line-height: 46px;
+    padding-left: 20px;
+    margin-bottom: 26px;
+    cursor: pointer;
+}
+
+.asideMenu .icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.asideMenu li:nth-child(1) .icon {
+    background: url("../images/icon1.png") no-repeat center;
+}
+
+.asideMenu li:nth-child(2) .icon {
+    background: url("../images/icon2.png") no-repeat center;
+}
+
+.asideMenu li:nth-child(3) .icon {
+    background: url("../images/icon3.png") no-repeat center;
+}
+
+.asideMenu li:nth-child(4) .icon {
+    background: url("../images/icon4.png") no-repeat center;
+}
+
+.asideMenu li:nth-child(5) .icon {
+    background: url("../images/icon5.png") no-repeat center;
+}
+
+.icon_right i {
+    position: absolute;
+    top: 16px;
+    left: 200px;
+    font-size: 14px;
+}
+
+.asideMenu li:hover,
+.is-opened {
+    border-right: 6px solid #5c98ff;
+    background: url("../images/caidanxuanzhong.png") repeat-x 0 0;
+}
+
+
+/* 左侧菜单样式end*/
+
+
+/* 自适应菜单 */
+
+.open {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 240px;
+    vertical-align: middle;
+    background: url('../images/menu1.png') no-repeat 0 0/cover;
+}
+
+.closed .open {
+    margin-left: 10px;
+    background: url('../images/menu2.png') no-repeat 0 0/cover;
+}
+
+.closed .aside-fixed-left,
+.closed .w230 {
+    width: 0;
+}
+        .banenr .video-wrapder{
+            float:left;
+        }
+        
+
+.mt0 #main {
+    margin: 0;
+}
+
+.closed #main {
+    margin-left: 0px;
+}
+.video-wrapder{
+            width:440px;
+            float:left;
+
+/*页面整体样式 end*/
+
+
+/* 整体结构框架end */
+
+
+/*===============================================操作记录===============================================*/
+
+.border {
+    padding: 19px 18px;
+    border: 1px solid #dfe2e6;
+}
+
+.el-table .table-head-th th {
+    text-align: center;
+    font-size: 16px;
+    background-color: #e5ecf2;
+}
+
+.el-table {
+    font-size: 16px;
+    text-align: center;
+}
+
+.el-table .td td {
+    padding: 4px 0;
+}
+
+.el-table .even {
+    background: #f7f9fb;
+}
+
+.el-table .odd {
+    background: #f2f5f9;
+    height: 20px;
+}
+
+
+/* 留言版块 */
+
+.headline {
+    font-size: 18px;
+    font-weight: bold;
+    width: 80px;
+    text-align: right;
+}
+
+.empiricalList,
+.boardForm {
+    margin: 10px 0;
+    margin-left: 4em;
+    padding: 0;
+}
+
+.listBox li {
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.flex {
+    display: flex;
+    padding: 10px 0;
+    line-height: 1.5;
+}
+
+.row .fl {
+    width: 80%;
+}
+
+.row .fr {
+    width: 20%;
+}
+
+.name,
+.timeBox {
+    white-space: nowrap;
+    padding-right: 0;
+    padding-left: 15px;
+}
+
+.timeBox {
+    padding: 10px 0;
+}
+
+.time {
+    color: #8a8282;
+}
+
+.reply {
+    margin-left: 10px;
+    color: #4da9f4;
+    cursor: pointer;
+}
+
+.replyBox {
+    background: #f0f2f5;
+}
+
+.replyBox .row {
+    width: 60%;
+}
+
+.boardForm>div {
+    margin: 10px 0;
+}
+
+.textarea {
+    width: 100%;
+}
+
+.textarea input {
+    width: 40%;
+}
+
+.textarea textarea {
+    resize: none;
+}
+
+.submit {
+    padding: 4px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background: #4da9f4;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+
+/* 模态框 */
+
+.addItem .title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.addItem .el-dialog__body {
+    padding: 0 20px;
+}
+
+.btnBox {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* 分页 */
+
+.page {
+    margin: 40px auto 0;
+}
+
+.page a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #dce5f3;
+    color: #487acf;
+}
+
+.page .blue {
+    color: #487acf;
+}
+
+.page a.disabled {
+    cursor: not-allowed;
+}
+
+.prev img {
+    transform: rotate(180deg)
+}
+
+
+/*数据统计样式*/
+
+.el-container.canvas {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 95px;
+}
+
+#DataSta #eachart1,
+#eachart2 {
+    width: 100%;
+    height: 400px;
+}
+
+#DataSta .Dataheader {
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border: 1px solid #dfe2e6;
+}
+
+#DataSta .leftData {
+    background-color: #fff;
+}
+
+
+/*  */
+
+.el-carousel__arrow {
+    background: rgba(255, 255, 255, .075);
+}
+
+.el-carousel__button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
