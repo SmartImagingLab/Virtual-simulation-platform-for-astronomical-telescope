@@ -1,8 +1,9 @@
 # Virtual-simulation-platform-for-astronomical-telescope
 A teaching web that  provides an virtual environment for students to learn  about aberrations of various optical systems of telescopes.
 # 光学望远镜成像实验
-实验简介：
-      本实验设计并实现了一个能够真实反映望远镜随外界环境变化产生像差的模型。以虚拟现实技术为手段，为学生提供了研究各类像差的环境。通过实验，学生可以掌握以下5个知识点:<br>
+本实验设计并实现了一个能够真实反映望远镜随外界环境变化产生像差的模型。<br>
+以虚拟现实技术为手段，为学生提供了研究各类像差的环境。<br>
+通过实验，学生可以掌握以下5个知识点:<br>
       1.光学系统的波像差<br>
       2.光学系统的点扩散函数<br>
       3.望远镜成像原理<br>
